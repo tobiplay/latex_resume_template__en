@@ -1,0 +1,122 @@
+%------------------------
+% Resume in Latex
+%------------------------
+% Author: 		Harshibar
+% Based on:     https://github.com/jakegut/resume
+% License:		MIT
+% Edited by:	https://github.com/tobiplay (2024)
+%------------------------
+\documentclass[a4, 11pt]{article}  % Basic document class.
+
+\usepackage{resume}  % Custom resume package with all styles.
+
+%------------------------
+% Resume content
+%------------------------
+\begin{document}
+\sffamily  % Set sans-serif font.
+
+%------------------------
+% Header
+%------------------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    {\textbf{\LARGE \color{\favColor}{John Doe}} \vspace{2pt}} &
+    \\
+    \small
+    123 Main Street, Apt 4B, San Francisco, CA 94105\hspace{.5pt} |
+    \hspace{.5pt}(123) 456-7890\hspace{.5pt} |
+    \hspace{.5pt}{\textbf{\color{\favColor}\uline{\href{mailto:johndoe@example.com}{Mail}}}}\hspace{.5pt} |
+    \hspace{.5pt}{\textbf{\color{\favColor}\uline{\href{https://www.linkedin.com/}{LinkedIn}}}}
+\end{tabular*}
+
+\justifying  % Justify the text.
+
+%------------------------
+% Education
+%------------------------
+\section{Education}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+{Princeton University}{Oct. 2021}
+{Master of Science in Computer Science (GPA 3.7/4.0)}{}
+\resumeSubheading
+{Stanford University}{Sept. 2019}
+{Bachelor of Science in Computer Science (GPA 3.6/4.0)}{}
+\resumeSubHeadingListEnd
+
+%------------------------
+% Experience
+%------------------------
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Google LLC}{Jan. 2022 -- Present}
+{Research Software Engineer}{Mountain View, CA}
+\resumeItemListStart
+\resumeItem{Reduced back-end's query response time by \qty{15}{\percent} via ML-driven "smart caching" (Python, PyTorch, Redis, Flask).}
+\resumeItem{Developed a reinforcement learning algorithm (Python, PyTorch, MLflow) that increased ad click-through rates on category-B-websites by \qty{4}{\percent} by automatically optimizing ad placements.}
+\resumeItem{Reduced deployment time of multiple Google-maintained open-source microservices by \qty{20}{\percent} by implementing scalable CI/CD pipelines (GitHub Actions, pytest) and implementing common OOP design patterns.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Meta Platforms, Inc.}{Apr. 2019 – Aug. 2019}
+{Research Software Engineer Intern}{Menlo Park, CA}
+\resumeItemListStart
+\resumeItem{Increased system accuracy of an internal content moderation research tool by \qty{25}{\percent} by developing and implementing a collaborative filtering algorithm (Python, scikit-learn, NumPy, SciPy, Polars).}
+\resumeItem{Improved recall of image recognition system for content moderation by \qty{5}{\percent} by implementing novel CNN architectures from \qty{5}{\plus} research papers (Python, PyTorch).}
+\resumeItem{Streamlined data visualization workflow for internal audits by creating automated tools (Matplotlib, Flask, Python, JavaScript, Tailwind CSS) with direct access to SQL-based database systems and other internal Java-based microservices.
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-30pt}
+
+%------------------------
+% Projects
+%------------------------
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{Chemical reaction prediction with ML}{Nov. 2020}
+\resumeItemListStart
+\resumeItem{Increased reaction prediction accuracy by \qty{30}{\percent} for retro-synthesis tasks by developing a deep-learning-based model (Python, PyTorch) that predicts reaction pathways for chiral amines.}
+\resumeItem{Reduced model training time by \qty{50}{\percent} by implementing a distributed training pipeline with PyTorch, Dagster, and Ray on Google Cloud Platform (GCP).}
+\resumeItem{Enhanced prediction interpretability by creating visualization tools for reaction pathways (Matplotlib, seaborn, Flask).}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{Personalized Learning Platform}{Jan. 2018}
+\resumeItemListStart
+\resumeItem{Enhanced student engagement by \qty{30}{\percent} by implementing a recommendation system using collaborative filtering and content-based filtering techniques (Python, scikit-learn, TensorFlow, pandas).}
+\resumeItem{Improved recommendation accuracy by \qty{25}{\percent} by training a hybrid model with TensorFlow, integrating it with a Django back-end and React fron-tend (Django, React, PostgreSQL).}
+\resumeItem{Increased platform usability by developing a responsive user interface and automating data collection processes from users and the university's website (JavaScript, HTML, CSS, Selenium).}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-18.5pt}
+
+%------------------------
+% Skills
+%------------------------
+\section{Skills}
+
+% This section needs some extra padding compared to the others because there's no
+% subheading to separate the content (items) from the section title and divider.
+\vspace{1pt}
+
+\begin{itemize}[leftmargin=0in, label={}]
+    \small{
+        \item{
+                    \textbf{Languages:} {English, French, Spanish}\\
+                    \textbf{Programming:} {Python, C++, Java, JavaScript, SQL, HTML, CSS}\\
+                    \textbf{Tools:} {Git, Polars, Docker, Google Cloud Platform (GCP), pandas, MLﬂow, PyTorch, Dagster, pytest, scikit-learn, NumPy, CI/CD (GitHub Actions), Matplotlib, PostgreSQL, Redis, SciPy, Flask, Tailwind CSS}
+              }
+    }
+\end{itemize}
+
+\end{document}
