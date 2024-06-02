@@ -1,0 +1,101 @@
+{
+    "name": "LaTeX",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "vscode",
+    "runServices": [
+        "vscode"
+    ],
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "james-yu.latex-workshop",
+                "stkb.rewrap",
+                "vscode-icons-team.vscode-icons",
+                "znck.grammarly"
+            ],
+            "settings": {
+                "files.insertFinalNewline": true,
+                "files.eol": "\n", // Empty line at the end of the file.
+                "latex-workshop.linting.chktex.enabled": true,
+                "latex-workshop.linting.chktex.exec.path": "chktex",
+                "latex-workshop.latex.clean.subfolder.enabled": true,
+                "latex-workshop.latex.autoClean.run": "onBuilt",
+                "editor.formatOnSave": true,
+                "files.associations": {
+                    "*.tex": "latex"
+                },
+                "latex-workshop.latexindent.path": "latexindent",
+                "latex-workshop.latexindent.args": [
+                    "-c",
+                    "%DIR%/",
+                    "%TMPFILE%",
+                    "-y=defaultIndent: '%INDENT%'"
+                ],
+                "latex-workshop.latex.outDir": "./out",
+                "latex-workshop.synctex.afterBuild.enabled": true,
+                "latex-workshop.view.pdf.viewer": "tab",
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "pdflatex",
+                        "command": "pdflatex",
+                        "args": [
+                            "--shell-escape",
+                            "-synctex=1",
+                            "-interaction=nonstopmode",
+                            "-file-line-error",
+                            "--output-directory=%OUTDIR%",
+                            "%DOC%.tex"
+                        ]
+                    },
+                    {
+                        "name": "lualatex",
+                        "command": "lualatex",
+                        "args": [
+                            "-shell-escape",
+                            "-synctex=1",
+                            "-interaction=nonstopmode",
+                            "-file-line-error",
+                            "-pdf",
+                            "-output-directory=%OUTDIR%",
+                            "%DOC%"
+                        ],
+                        "env": {}
+                    },
+                    {
+                        "name": "xelatex",
+                        "command": "xelatex",
+                        "args": [
+                            "--shell-escape",
+                            "-synctex=1",
+                            "-interaction=nonstopmode",
+                            "-file-line-error",
+                            "--output-directory=%OUTDIR%",
+                            "%DOC%.tex"
+                        ]
+                    },
+                    {
+                        "name": "biber",
+                        "command": "biber",
+                        "args": [
+                            "%DOCFILE%",
+                            "-output-directory=%OUTDIR%"
+                        ]
+                    }
+                ],
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "lualatex",
+                        "tools": [
+                            "lualatex"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
