@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a LaTeX resume template.
+This is a LaTeX-based resume template, based on the work by GitHub user [jakegut](https://github.com/jakegut/resume), adapted, refactored, and extended by [tobiplay](https://github.com/tobiplay). This template follows the work that has been made available to the public over at Reddit in [r/EngineeringResumes](https://www.reddit.com/r/EngineeringResumes/).
 
 ## Requirements
 
