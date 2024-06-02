@@ -1,0 +1,8 @@
+# All the files in the output directory.
+/out/*
+
+# Keep the output PDF.
+!/out/*.pdf  
+
+# MacOS hidden files.
+.DS_Store
